@@ -25,20 +25,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Función para calcular el costo
-  function calcularCosto() {
-    let costoTotal = 0;
 
-    // Itera a través de los checkboxes y suma los valores seleccionados
-    checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-        // Convierte el valor del checkbox a un número y súmalo al costo total
-        costoTotal += parseFloat(checkbox.value);
-      }
-    });
+// Función para calcular el costo
+function calcularCosto() {
+  let costoTotal = 0;
+  let cantidadSeleccionada = 0; // Contador para la cantidad de checkboxes seleccionados
 
-    // Actualiza el elemento con clase "costo" con el costo total
-    const costoElement = document.querySelector(".costo");
-    costoElement.textContent = "Costo: $" + costoTotal.toFixed(3); // Muestra el costo con dos decimales
+  // Itera a través de los checkboxes y suma los valores seleccionados
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      // Convierte el valor del checkbox a un número y súmalo al costo total
+      costoTotal += parseFloat(checkbox.value);
+      cantidadSeleccionada++; // Incrementa la cantidad de checkboxes seleccionados
+    }
+  });
+
+  // Aplica el descuento si hay más de un checkbox seleccionado
+  if (cantidadSeleccionada > 1) {
+    costoTotal -= (cantidadSeleccionada - 1) * 1000; // Resta $1000 por cada checkbox adicional seleccionado
   }
-});
+
+  // Actualiza el elemento con clase "costo" con el costo total
+  const costoElement = document.querySelector(".costo");
+  costoElement.textContent = "Costo: $" + costoTotal.toFixed(3); // Muestra el costo con tres decimales
+}
