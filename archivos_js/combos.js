@@ -49,3 +49,4 @@ document.addEventListener("DOMContentLoaded", function () {
     costoElement.textContent = "Costo: $" + costoTotal.toFixed(3); // Muestra el costo con tres decimales
   }
 });
+
