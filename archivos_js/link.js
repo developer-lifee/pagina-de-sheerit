@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const comboNombre = divContenedor.getAttribute("data-nombre");
             selectedItems.push(comboNombre);
         });
+            // Aplica el descuento si hay más de un checkbox seleccionado
+    if (selectedItems > 1) {
+        totalValue -= (selectedItems - 1) ; // Resta $1000 por cada checkbox adicional seleccionado
+      }
 
         if (totalCostSpan) {
             totalCostSpan.textContent = totalValue.toFixed(3);
