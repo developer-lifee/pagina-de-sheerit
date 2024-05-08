@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Aplica el descuento si hay más de un checkbox seleccionado
     if (cantidadSeleccionada > 1) {
-      costoTotal -= (cantidadSeleccionada - 1) * 1000; // Resta $1000 por cada checkbox adicional seleccionado
+      costoTotal -= (cantidadSeleccionada - 1000) ; // Resta $1000 por cada checkbox adicional seleccionado
     }
 
     // Actualiza el elemento con clase "costo" con el costo total
