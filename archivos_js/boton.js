@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (boton.id !== 'open') {
       boton.addEventListener('click', () => {
         const servicio = boton.id;
-        const message = `Hola, estoy interesado en una suscripción de ${servicio}.`; // Mensaje sin costo
+        const message = `Hola, estoy interesado en una suscripción de: ${servicio}.`; // Mensaje sin costo
 
         window.open(`https://wa.me/+573118587974/?text=${encodeURIComponent(message)}`, "_blank");
       });
