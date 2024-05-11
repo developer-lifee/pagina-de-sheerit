@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const selectedItemsString = selectedItems.join(", ");
-        const message = `Hola estoy interesado en un suscripción de: ${selectedItemsString}\nCosto Total: $${totalCost.toFixed(3)}`;
+        const message = `Hola, estoy interesado en una suscripción de: ${selectedItemsString}\nCosto Total: $${totalCost.toFixed(3)}`;
 
         window.open(`https://wa.me/+573118587974/?text=${encodeURIComponent(message)}`, "_blank");
     });
