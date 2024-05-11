@@ -4,15 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const botones = document.querySelectorAll('.button-buy');
 
   botones.forEach(boton => {
-    boton.addEventListener('click', () => {
-      const servicio = boton.id;
-      const message = `Hola, estoy interesado en una suscripción de: ${servicio}.`; // Mensaje sin costo
+    if (boton.id !== 'open') {
+      boton.addEventListener('click', () => {
+        const servicio = boton.id;
+        const message = `Hola, estoy interesado en una suscripción de ${servicio}.`; // Mensaje sin costo
 
-      window.open(`https://wa.me/+573118587974/?text=${encodeURIComponent(message)}`, "_blank");
-    });
+        window.open(`https://wa.me/+573118587974/?text=${encodeURIComponent(message)}`, "_blank");
+      });
+    }
   });
 });
-
 
 //Pagina de Ventas
 document.addEventListener("DOMContentLoaded", function() {
