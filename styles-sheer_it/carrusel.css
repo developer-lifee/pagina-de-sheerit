@@ -1,4 +1,4 @@
-h4, h2,small,a{
+h4, h2, small, a {
     margin: 0;
     padding: 0;
 }
@@ -7,6 +7,8 @@ a{
 }
 .Carousel{
     margin: 0px 60px;
+    display: flex;
+    overflow: hidden;
 }
 .Carousel h2{
     color: #2f4858;

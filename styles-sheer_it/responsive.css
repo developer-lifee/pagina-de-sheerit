@@ -1,5 +1,18 @@
 @media screen and (min-width:320px) and (max-width:480px){
 
+/* Example responsive styles */
+@media (max-width: 768px) {
+    .navigation-menu {
+        flex-direction: column;
+    }
+    .logo-image {
+        width: 50px;
+    }
+    /* ...additional responsive styles... */
+}
+
+/* ...add more media queries as needed... */
+
     .card .card-center .arc-img .arrondis-theme[data-v-6b0951c9]{
 
         height:20px
